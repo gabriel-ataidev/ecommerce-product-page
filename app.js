@@ -88,7 +88,11 @@ function showImagesModal() {
 }
 function closeImagesModal() {
     imagesModal.style.display = 'none';
-}console.log(items);
+}
+
+
+const items = Array.from(document.getElementsByClassName("thumbnail-img"));
+console.log(items);
 items.forEach((item) => {
   item.addEventListener("click", onItemClick);
 });
