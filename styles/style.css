@@ -78,28 +78,25 @@ nav .profile .cart {
 nav .profile .cart svg path {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-  fill: #69707D;
+  fill: #69707d;
 }
 
 nav .profile .cart svg path:hover {
   fill: #000;
 }
 
-nav .profile .cart .value-container {
-  position: absolute;
+nav .profile .cart #cart-value {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: absolute;
   top: 8px;
   left: 9px;
   background: #ff7d1a;
   border-radius: 6px;
-}
-
-nav .profile .cart .value-container .cart-value {
   color: #fff;
   font-size: 9px;
   padding: 0px 6px;
@@ -157,8 +154,8 @@ nav .profile .profile-picture img:hover {
   height: auto;
   border-radius: 5px;
   cursor: pointer;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .content-container .images-container .thumbnail-img:hover {
@@ -280,8 +277,8 @@ nav .profile .profile-picture img:hover {
   cursor: pointer;
   -webkit-filter: drop-shadow(0px 20px 30px rgba(255, 112, 2, 0.644));
           filter: drop-shadow(0px 20px 30px rgba(255, 112, 2, 0.644));
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .content-container .text-container .cart-container .cart-btn img {
