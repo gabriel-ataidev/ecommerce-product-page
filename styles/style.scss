@@ -44,10 +44,11 @@ nav {
       display: flex;
       align-items: center;
       position: relative;
+      cursor: pointer;
       svg {
-          cursor: pointer;
         path {
           transition: all 0.4s ease-in-out;
+          fill: #69707D;
           &:hover {
             fill: #000;
           }
@@ -81,4 +82,103 @@ nav {
       }
     }
   }
+}
+.content-container{
+    display: flex;
+    max-width: 80%;
+    margin: 50px auto;
+    .card{
+        width: 50%;
+    }
+    .images-container{
+        margin-left: 40px;
+        img{
+            width: 400px;
+            height: auto;
+        }
+    }
+    .text-container{
+        padding:30px;
+        .company{
+            color: #ff7d1a;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        .sneaker-edition{
+            font-size: 45px;
+            padding: 10px 0 20px;
+        }
+        .description{
+            color: #868686;
+            padding-bottom: 15px;
+        }
+        .price-container{
+            display: grid;
+            grid-template-columns: [start] 130px [line1] 50px [end];
+            grid-template-rows: [start] 40px [row1] 20px [end];
+            align-items: center;
+            .price{
+                font-size: 25px;
+            }
+            .discount{
+                color: #ff7002;
+                border-radius: 5px;
+                font-size: 14px;
+                padding: 3px 7px;
+                height: fit-content;
+                width: fit-content;
+                font-weight: 700;
+                background: #f5ddcc;
+            }
+            .old-price{
+                color: #868686;
+                font-size: 15px;
+                font-weight: 700;
+                text-decoration: line-through;
+            }
+        }
+        .cart-container{
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            .value{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 150px;
+                height: 50px;
+                border-radius: 10px;
+                background: #ebebeb;
+                span{
+                    font-weight: 700;
+                    padding: 0 40px;
+                }
+                img{
+                    cursor: pointer;
+                }
+            }
+            .cart-btn{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                background: #ff7002;
+                border: none;
+                border-radius: 10px;
+                width: 250px;
+                cursor: pointer;
+                img{
+                    margin-right: 10px;
+                    width: 18px;
+                    height: auto;
+                }
+                filter: drop-shadow(0px 20px 30px rgba(255, 112, 2, 0.644));
+                transition: all .4s ease-in-out;
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
 }
