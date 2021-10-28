@@ -86,9 +86,7 @@ nav .profile .cart svg path:hover {
 }
 
 nav .profile .cart #cart-value {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -115,6 +113,131 @@ nav .profile .profile-picture img {
 nav .profile .profile-picture img:hover {
   border: 2px solid #ff7d1a;
   border-radius: 50px;
+}
+
+.cart-modal {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  z-index: 10;
+  top: 80px;
+  right: 90px;
+  width: 320px;
+  min-height: 170px;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  padding: 15px 0 0;
+  border-radius: 10px;
+  background: #fff;
+  -webkit-box-shadow: 0 10px 20px rgba(114, 113, 113, 0.383);
+          box-shadow: 0 10px 20px rgba(114, 113, 113, 0.383);
+}
+
+.cart-modal .title {
+  font-weight: 700;
+  font-size: 14px;
+  width: 100%;
+  padding: 0 15px 15px;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.cart-modal .modal-content #modal-empty {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 700;
+  color: #a1a1a1;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.cart-modal .modal-content #modal-filled {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 20px;
+}
+
+.cart-modal .modal-content #modal-filled .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cart-modal .modal-content #modal-filled .info .image-in-cart {
+  height: 45px;
+  width: auto;
+  border-radius: 5px;
+}
+
+.cart-modal .modal-content #modal-filled .info .text {
+  padding: 0 10px;
+  font-size: 15px;
+  color: #505050;
+}
+
+.cart-modal .modal-content #modal-filled .info .text #result {
+  padding-left: 5px;
+  font-weight: 700;
+  color: #000;
+}
+
+.cart-modal .modal-content #modal-filled .info .delete-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.cart-modal .modal-content #modal-filled .info .delete-icon img {
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.cart-modal .modal-content #modal-filled .info .delete-icon img:hover {
+  opacity: 0.5;
+}
+
+.cart-modal .modal-content #modal-filled button {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  background: #ff7002;
+  border: 0;
+  border-radius: 10px;
+  padding: 15px 0;
+  margin-top: 20px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.cart-modal .modal-content #modal-filled button:hover {
+  opacity: 0.7;
+}
+
+.show-cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .content-container {
