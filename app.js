@@ -42,3 +42,23 @@ function deleteItem() {
     modalFilled.style.display = 'none';
     displayCartValue();
 }
+
+
+const modalMainImg = document.querySelector('.modal-main-img');
+const imagesModal = document.querySelector('.images-modal');
+let value = 1
+
+function showNextImage() {
+    if(value <= 3){
+        ++value;
+    }else{
+        value = 1;
+    }
+    modalMainImg.setAttribute("src", `images/image-product-${value}.jpg`);
+}
+function showImagesModal() {
+    imagesModal.style.display = 'flex';
+}
+function closeImagesModal() {
+    imagesModal.style.display = 'none';
+}
