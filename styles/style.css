@@ -252,44 +252,6 @@ nav .profile .profile-picture img:hover {
   width: 50%;
 }
 
-.content-container .images-container {
-  margin-left: 90px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: [start] 75px [line1] 75px [line2] 75px [line3] 75px [end];
-      grid-template-columns: [start] 75px [line1] 75px [line2] 75px [line3] 75px [end];
-  -ms-grid-rows: [start] 360px [row1] 90px [end];
-      grid-template-rows: [start] 360px [row1] 90px [end];
-  gap: 20px;
-}
-
-.content-container .images-container .main-img {
-  grid-column: start / end;
-  grid-row: start / row1;
-  width: 360px;
-  height: auto;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.content-container .images-container .thumbnail-img {
-  width: 75px;
-  height: auto;
-  border-radius: 5px;
-  cursor: pointer;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-
-.content-container .images-container .thumbnail-img:hover {
-  opacity: 0.6;
-}
-
-.content-container .images-container .active {
-  border: 2px solid #ff7002;
-  opacity: 0.6;
-}
-
 .content-container .text-container {
   padding: 30px 50px 30px 0;
 }
@@ -412,5 +374,129 @@ nav .profile .profile-picture img:hover {
 
 .content-container .text-container .cart-container .cart-btn:hover {
   opacity: 0.8;
+}
+
+.images-container {
+  margin-left: 90px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: [start] 75px [line1] 75px [line2] 75px [line3] 75px [end];
+      grid-template-columns: [start] 75px [line1] 75px [line2] 75px [line3] 75px [end];
+  -ms-grid-rows: [start] 360px [row1] 90px [end];
+      grid-template-rows: [start] 360px [row1] 90px [end];
+  gap: 20px;
+}
+
+.images-container .main-img {
+  grid-column: start / end;
+  grid-row: start / row1;
+  width: 360px;
+  height: auto;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.images-container .thumbnail-img {
+  width: 75px;
+  height: auto;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.images-container .thumbnail-img:hover {
+  opacity: 0.6;
+}
+
+.images-container .active {
+  border: 2px solid #ff7002;
+  opacity: 0.6;
+}
+
+.images-modal {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  z-index: 20;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(22, 22, 22, 0.815);
+}
+
+.images-modal .content-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.images-modal .content-container .close-btn {
+  cursor: pointer;
+  margin-left: auto;
+  margin-bottom: 15px;
+  -webkit-transform: translateX(40px);
+          transform: translateX(40px);
+}
+
+.images-modal .content-container .close-btn:hover path {
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  fill: #ff7d1a;
+}
+
+.images-modal .content-container .btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #fff;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  -webkit-transform: translate(470px, 240px);
+          transform: translate(470px, 240px);
+  z-index: 12;
+}
+
+.images-modal .content-container .btn-container:hover svg path {
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  stroke: #ff7d1a;
+}
+
+.images-modal .content-container .prev {
+  -webkit-transform: translate(30px, 240px);
+          transform: translate(30px, 240px);
+}
+
+.images-modal .content-container .images-container {
+  -ms-grid-columns: [start] 75px [line1] 75px [line2] 75px [line3] 75px [end];
+      grid-template-columns: [start] 75px [line1] 75px [line2] 75px [line3] 75px [end];
+  -ms-grid-rows: [start] 440px [row1] 90px [end];
+      grid-template-rows: [start] 440px [row1] 90px [end];
+  gap: 20px;
+}
+
+.images-modal .content-container .images-container .main-img {
+  width: 440px;
+  height: auto;
+  -webkit-transform: translateX(-40px);
+          transform: translateX(-40px);
 }
 /*# sourceMappingURL=style.css.map */
