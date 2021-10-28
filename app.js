@@ -75,6 +75,14 @@ function showNextImage() {
     }
     modalMainImg.setAttribute("src", `images/image-product-${value}.jpg`);
 }
+function showPrevImage() {
+    if(value == 1){
+        value = 4;
+    }else{
+        --value;
+    }
+    modalMainImg.setAttribute("src", `images/image-product-${value}.jpg`);
+}
 function showImagesModal() {
     imagesModal.style.display = 'flex';
 }
