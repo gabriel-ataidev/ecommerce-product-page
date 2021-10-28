@@ -125,7 +125,7 @@ nav .profile .profile-picture img:hover {
   display: -ms-flexbox;
   display: flex;
   max-width: 80%;
-  margin: 50px auto;
+  margin: 50px auto 0;
 }
 
 .content-container .card {
@@ -133,16 +133,45 @@ nav .profile .profile-picture img:hover {
 }
 
 .content-container .images-container {
-  margin-left: 40px;
+  margin-left: 90px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: [start] 75px [line1] 75px [line2] 75px [line3] 75px [end];
+      grid-template-columns: [start] 75px [line1] 75px [line2] 75px [line3] 75px [end];
+  -ms-grid-rows: [start] 360px [row1] 90px [end];
+      grid-template-rows: [start] 360px [row1] 90px [end];
+  gap: 20px;
 }
 
-.content-container .images-container img {
-  width: 400px;
+.content-container .images-container .main-img {
+  grid-column: start / end;
+  grid-row: start / row1;
+  width: 360px;
   height: auto;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.content-container .images-container .thumbnail-img {
+  width: 75px;
+  height: auto;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.content-container .images-container .thumbnail-img:hover {
+  opacity: 0.6;
+}
+
+.content-container .images-container .active {
+  border: 2px solid #ff7002;
+  opacity: 0.6;
 }
 
 .content-container .text-container {
-  padding: 30px;
+  padding: 30px 50px 30px 0;
 }
 
 .content-container .text-container .company {
