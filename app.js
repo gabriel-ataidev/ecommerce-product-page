@@ -88,4 +88,18 @@ function showImagesModal() {
 }
 function closeImagesModal() {
     imagesModal.style.display = 'none';
+}console.log(items);
+items.forEach((item) => {
+  item.addEventListener("click", onItemClick);
+});
+function onItemClick(e) {
+  const selectedAttribute = e.target;
+  items.forEach((item) => {
+    const itemAttribute = item;
+    if (itemAttribute === selectedAttribute) {
+      item.classList.add("active");
+      return;
+    }
+    item.classList.remove("active");
+  });
 }
