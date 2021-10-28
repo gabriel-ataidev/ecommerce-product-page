@@ -7,6 +7,118 @@
 }
 
 body {
-  font: 400 16px 'Kumbh Sans', sans-serif;
+  font: 400 16px "Kumbh Sans", sans-serif;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 80%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  height: 95px;
+  border-bottom: 1px solid #dddddf;
+}
+
+nav .title {
+  font-size: 20px;
+  margin-right: 50px;
+}
+
+nav .items ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+  color: #868686;
+}
+
+nav .items ul li {
+  padding: 35px 0;
+  -webkit-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+nav .items ul li:hover {
+  color: #000;
+  border-bottom: 3px solid #ff7d1a;
+}
+
+nav .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+nav .profile .cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+nav .profile .cart svg {
+  cursor: pointer;
+}
+
+nav .profile .cart svg path {
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+nav .profile .cart svg path:hover {
+  fill: #000;
+}
+
+nav .profile .cart .value-container {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 8px;
+  left: 9px;
+  background: #ff7d1a;
+  border-radius: 6px;
+}
+
+nav .profile .cart .value-container .cart-value {
+  color: #fff;
+  font-size: 9px;
+  padding: 0px 6px;
+}
+
+nav .profile .profile-picture {
+  margin-left: 30px;
+}
+
+nav .profile .profile-picture img {
+  height: 40px;
+  width: auto;
+  cursor: pointer;
+}
+
+nav .profile .profile-picture img:hover {
+  border: 2px solid #ff7d1a;
+  border-radius: 50px;
 }
 /*# sourceMappingURL=style.css.map */
