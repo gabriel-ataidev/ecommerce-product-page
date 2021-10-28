@@ -44,9 +44,28 @@ function deleteItem() {
 }
 
 
+const mainImg = document.querySelector('#main-img')
+let number = 1;
+
+function showImage1() {
+    mainImg.setAttribute("src", "images/image-product-1.jpg");
+}
+function showImage2() {
+    mainImg.setAttribute("src", "images/image-product-2.jpg");
+}
+function showImage3() {
+    mainImg.setAttribute("src", "images/image-product-3.jpg");
+}
+function showImage4() {
+    mainImg.setAttribute("src", "images/image-product-4.jpg");
+}
+
+
+
+
+let value = 1
 const modalMainImg = document.querySelector('.modal-main-img');
 const imagesModal = document.querySelector('.images-modal');
-let value = 1
 
 function showNextImage() {
     if(value <= 3){
