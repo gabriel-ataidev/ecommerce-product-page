@@ -300,6 +300,7 @@ nav {
   .content-container {
     display: flex;
     flex-direction: column;
+    transform: translateX(-40px);
     .close-btn {
       cursor: pointer;
       margin-left: auto;

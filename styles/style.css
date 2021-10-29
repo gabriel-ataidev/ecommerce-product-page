@@ -437,6 +437,8 @@ nav .profile .profile-picture img:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-transform: translateX(-40px);
+          transform: translateX(-40px);
 }
 
 .images-modal .content-container .close-btn {

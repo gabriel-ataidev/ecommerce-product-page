@@ -1,68 +1,63 @@
-const cartNr = document.querySelector('#cart-nr');
-const cartValue = document.querySelector('#cart-value');
-const cartModal = document.querySelector('.cart-modal');
-const modalEmpty = document.querySelector('#modal-empty');
-const modalFilled = document.querySelector('#modal-filled');
-const quantity = document.querySelector('#quantity');
-const result = document.querySelector('#result');
+const cartNr = document.querySelector("#cart-nr");
+const cartValue = document.querySelector("#cart-value");
+const cartModal = document.querySelector(".cart-modal");
+const modalEmpty = document.querySelector("#modal-empty");
+const modalFilled = document.querySelector("#modal-filled");
+const quantity = document.querySelector("#quantity");
+const result = document.querySelector("#result");
 
 function increaseCartNr() {
-    ++cartNr.innerText;
+  ++cartNr.innerText;
 }
 function decreaseCartNr() {
-    if(cartNr.innerText == 0) return;
-    --cartNr.innerText;
+  if (cartNr.innerText == 0) return;
+  --cartNr.innerText;
 }
 function addToCart() {
-    cartValue.innerText = cartNr.innerText;
-    quantity.innerText = cartNr.innerText;
-    cartValue.style.display = 'flex';
-    modalEmpty.style.display = 'none';
-    modalFilled.style.display = 'none';
-    displayCartValue();
-    finalPrice();
+  cartValue.innerText = cartNr.innerText;
+  quantity.innerText = cartNr.innerText;
+  cartValue.style.display = "flex";
+  modalEmpty.style.display = "none";
+  modalFilled.style.display = "none";
+  displayCartValue();
+  finalPrice();
 }
 function displayCartValue() {
-    if(cartValue.innerText == 0) {
-        cartValue.style.display = 'none';
-        modalEmpty.style.display = 'flex';
-    }else{
-        modalFilled.style.display = 'flex';
-    }
+  if (cartValue.innerText == 0) {
+    cartValue.style.display = "none";
+    modalEmpty.style.display = "flex";
+  } else {
+    modalFilled.style.display = "flex";
+  }
 }
 function showCartModal() {
-    cartModal.classList.toggle("show-cart");
+  cartModal.classList.toggle("show-cart");
 }
 function finalPrice() {
-    const calculation = cartNr.innerText * 125;
-    result.innerHTML = `$${calculation}.00`;
+  const calculation = cartNr.innerText * 125;
+  result.innerHTML = `$${calculation}.00`;
 }
 function deleteItem() {
-    cartValue.innerText = 0;
-    modalFilled.style.display = 'none';
-    displayCartValue();
+  cartValue.innerText = 0;
+  modalFilled.style.display = "none";
+  displayCartValue();
 }
 
-
-const mainImg = document.querySelector('#main-img')
-let number = 1;
+const mainImg = document.querySelector("#main-img");
 
 function showImage1() {
-    mainImg.setAttribute("src", "images/image-product-1.jpg");
+  mainImg.setAttribute("src", "images/image-product-1.jpg");
 }
 function showImage2() {
-    mainImg.setAttribute("src", "images/image-product-2.jpg");
+  mainImg.setAttribute("src", "images/image-product-2.jpg");
 }
 function showImage3() {
-    mainImg.setAttribute("src", "images/image-product-3.jpg");
+  mainImg.setAttribute("src", "images/image-product-3.jpg");
 }
 function showImage4() {
-    mainImg.setAttribute("src", "images/image-product-4.jpg");
+  mainImg.setAttribute("src", "images/image-product-4.jpg");
 }
-
-
-
-
+ 
 let value = 1
 const modalMainImg = document.querySelector('.modal-main-img');
 const imagesModal = document.querySelector('.images-modal');
@@ -82,6 +77,18 @@ function showPrevImage() {
         --value;
     }
     modalMainImg.setAttribute("src", `images/image-product-${value}.jpg`);
+}
+function showModalImage1() {
+    modalMainImg.setAttribute("src", "images/image-product-1.jpg");
+}
+function showModalImage2() {
+    modalMainImg.setAttribute("src", "images/image-product-2.jpg");
+}
+function showModalImage3() {
+    modalMainImg.setAttribute("src", "images/image-product-3.jpg");
+}
+function showModalImage4() {
+    modalMainImg.setAttribute("src", "images/image-product-4.jpg");
 }
 function showImagesModal() {
     imagesModal.style.display = 'flex';
