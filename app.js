@@ -98,22 +98,23 @@ function closeImagesModal() {
 }
 
 //changing main img in smartphone
+let mobileValue = 1;
 const mobileMainImg = document.querySelector(".mobile-img");
-function showNextImage() {
-  if (value <= 3) {
-    ++value;
+function showNextMobileImage() {
+  if (mobileValue <= 3) {
+    ++mobileValue;
   } else {
-    value = 1;
+    mobileValue = 1;
   }
-  mobileMainImg.setAttribute("src", `images/image-product-${value}.jpg`);
+  mobileMainImg.setAttribute("src", `images/image-product-${mobileValue}.jpg`);
 }
-function showPrevImage() {
-  if (value == 1) {
-    value = 4;
+function showPrevMobileImage() {
+  if (mobileValue == 1) {
+    mobileValue = 4;
   } else {
-    --value;
+    --mobileValue;
   }
-  mobileMainImg.setAttribute("src", `images/image-product-${value}.jpg`);
+  mobileMainImg.setAttribute("src", `images/image-product-${mobileValue}.jpg`);
 }
 
 //changing the active img
