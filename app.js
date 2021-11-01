@@ -97,6 +97,24 @@ function closeImagesModal() {
     imagesModal.style.display = 'none';
 }
 
+//changing main img in smartphone
+const mobileMainImg = document.querySelector(".mobile-img");
+function showNextImage() {
+  if (value <= 3) {
+    ++value;
+  } else {
+    value = 1;
+  }
+  mobileMainImg.setAttribute("src", `images/image-product-${value}.jpg`);
+}
+function showPrevImage() {
+  if (value == 1) {
+    value = 4;
+  } else {
+    --value;
+  }
+  mobileMainImg.setAttribute("src", `images/image-product-${value}.jpg`);
+}
 
 const items = Array.from(document.getElementsByClassName("thumbnail-img"));
 console.log(items);
