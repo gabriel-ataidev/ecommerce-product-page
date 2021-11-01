@@ -7,42 +7,83 @@
     <title>sneakers</title>
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
-</head>
-<body>
-      <div class="images-modal">
-          <div class="content-container">
-              <svg class="close-btn" onclick="closeImagesModal()" width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#69707D" fill-rule="evenodd"/></svg>
-              <div class="btn-container" onclick="showNextImage()"> 
-                  <svg class="next-btn" width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
-              </div>
-              <div class="btn-container prev">
-                  <svg class="prev-btn" onclick="showPrevImage()" width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>   
-            </div>
-                <div class="card images-container">
-                    <img class="main-img modal-main-img" src="images/image-product-1.jpg" />
-                    <img
-                      class="thumbnail-img img1 active"
-                      src="images/image-product-1-thumbnail.jpg"
-                      onclick="showModalImage1()"
-                    />
-                    <img
-                      class="thumbnail-img img2"
-                      src="images/image-product-2-thumbnail.jpg"
-                      onclick="showModalImage2()"
-                    />
-                    <img
-                      class="thumbnail-img img3"
-                      src="images/image-product-3-thumbnail.jpg"
-                      onclick="showModalImage3()"
-                    />
-                    <img
-                      class="thumbnail-img img4"
-                      src="images/image-product-4-thumbnail.jpg"
-                      onclick="showModalImage4()"
-                    />
-                  </div>
-          </div>
+  </head>
+  <body>
+    <div class="images-modal">
+      <div class="content-container">
+        <svg
+          class="close-btn"
+          onclick="closeImagesModal()"
+          width="14"
+          height="15"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+            fill="#69707D"
+            fill-rule="evenodd"
+          />
+        </svg>
+        <div class="btn-container next" onclick="showNextImage()">
+          <svg
+            class="next-btn"
+            width="13"
+            height="18"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m2 1 8 8-8 8"
+              stroke="#1D2026"
+              stroke-width="3"
+              fill="none"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <div class="btn-container prev" onclick="showPrevImage()">
+          <svg
+            class="prev-btn"
+            width="12"
+            height="18"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11 1 3 9l8 8"
+              stroke="#1D2026"
+              stroke-width="3"
+              fill="none"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <div class="card images-container">
+          <img
+            class="main-img modal-main-img"
+            src="images/image-product-1.jpg"
+          />
+          <img
+            class="thumbnail-img img1 active"
+            src="images/image-product-1-thumbnail.jpg"
+            onclick="showModalImage1()"
+          />
+          <img
+            class="thumbnail-img img2"
+            src="images/image-product-2-thumbnail.jpg"
+            onclick="showModalImage2()"
+          />
+          <img
+            class="thumbnail-img img3"
+            src="images/image-product-3-thumbnail.jpg"
+            onclick="showModalImage3()"
+          />
+          <img
+            class="thumbnail-img img4"
+            src="images/image-product-4-thumbnail.jpg"
+            onclick="showModalImage4()"
+          />
+        </div>
       </div>
+    </div>
     <nav>
       <div class="title">
         <h1>sneakers</h1>
@@ -74,29 +115,77 @@
       <div class="class"></div>
     </nav>
     <div class="cart-modal">
-        <span class="title">Cart</span>
-        <div class="modal-content">
-            <div id="modal-empty">
-                <span>Your cart is empty.</span>
-            </div>
-            <div id="modal-filled">
-                <div class="info">
-                    <img class="image-in-cart" src="images/image-product-1-thumbnail.jpg">
-                    <div class="text">
-                        <span>Fall Limited Edition Sneakers</span>
-                        <p>$125.00 x <span id="quantity">0</span> <span id="result">0</span></p>
-                    </div>
-                    <div onclick="deleteItem()" class="delete-icon">
-                        <img src="images/icon-delete.svg">
-                    </div>
-                </div>
-                <button>Checkout</button>
-            </div>
+      <span class="title">Cart</span>
+      <div class="modal-content">
+        <div id="modal-empty">
+          <span>Your cart is empty.</span>
         </div>
+        <div id="modal-filled">
+          <div class="info">
+            <img
+              class="image-in-cart"
+              src="images/image-product-1-thumbnail.jpg"
+            />
+            <div class="text">
+              <span>Fall Limited Edition Sneakers</span>
+              <p>
+                $125.00 x <span id="quantity">0</span>
+                <span id="result">0</span>
+              </p>
+            </div>
+            <div onclick="deleteItem()" class="delete-icon">
+              <img src="images/icon-delete.svg" />
+            </div>
+          </div>
+          <button>Checkout</button>
+        </div>
+      </div>
     </div>
     <div class="content-container">
+      <div class="mobile-images">
+        <div class="mobile-main-img">
+          <img src="images/image-product-1.jpg" class="mobile-img">
+        </div>
+        <div class="btn-container next" onclick="showNextImage()">
+          <svg
+            class="next-btn"
+            width="13"
+            height="18"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m2 1 8 8-8 8"
+              stroke="#1D2026"
+              stroke-width="3"
+              fill="none"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <div class="btn-container prev" onclick="showPrevImage()">
+          <svg
+            class="prev-btn"
+            width="12"
+            height="18"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11 1 3 9l8 8"
+              stroke="#1D2026"
+              stroke-width="3"
+              fill="none"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+      </div>
       <div class="card images-container">
-        <img class="main-img" id="main-img" onclick="showImagesModal()" src="images/image-product-1.jpg" />
+        <img
+          class="main-img"
+          id="main-img"
+          onclick="showImagesModal()"
+          src="images/image-product-1.jpg"
+        />
         <img
           class="thumbnail-img img1 active"
           src="images/image-product-1-thumbnail.jpg"

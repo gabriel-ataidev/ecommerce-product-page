@@ -1,3 +1,4 @@
+//changing cart value
 const cartNr = document.querySelector("#cart-nr");
 const cartValue = document.querySelector("#cart-value");
 const cartModal = document.querySelector(".cart-modal");
@@ -5,7 +6,6 @@ const modalEmpty = document.querySelector("#modal-empty");
 const modalFilled = document.querySelector("#modal-filled");
 const quantity = document.querySelector("#quantity");
 const result = document.querySelector("#result");
-
 function increaseCartNr() {
   ++cartNr.innerText;
 }
@@ -43,8 +43,8 @@ function deleteItem() {
   displayCartValue();
 }
 
+//changing main img in home
 const mainImg = document.querySelector("#main-img");
-
 function showImage1() {
   mainImg.setAttribute("src", "images/image-product-1.jpg");
 }
@@ -57,44 +57,44 @@ function showImage3() {
 function showImage4() {
   mainImg.setAttribute("src", "images/image-product-4.jpg");
 }
- 
-let value = 1
-const modalMainImg = document.querySelector('.modal-main-img');
-const imagesModal = document.querySelector('.images-modal');
 
+//changing main img in modal
+let value = 1;
+const modalMainImg = document.querySelector(".modal-main-img");
+const imagesModal = document.querySelector(".images-modal");
 function showNextImage() {
-    if(value <= 3){
-        ++value;
-    }else{
-        value = 1;
-    }
-    modalMainImg.setAttribute("src", `images/image-product-${value}.jpg`);
+  if (value <= 3) {
+    ++value;
+  } else {
+    value = 1;
+  }
+  modalMainImg.setAttribute("src", `images/image-product-${value}.jpg`);
 }
 function showPrevImage() {
-    if(value == 1){
-        value = 4;
-    }else{
-        --value;
-    }
-    modalMainImg.setAttribute("src", `images/image-product-${value}.jpg`);
+  if (value == 1) {
+    value = 4;
+  } else {
+    --value;
+  }
+  modalMainImg.setAttribute("src", `images/image-product-${value}.jpg`);
 }
 function showModalImage1() {
-    modalMainImg.setAttribute("src", "images/image-product-1.jpg");
+  modalMainImg.setAttribute("src", "images/image-product-1.jpg");
 }
 function showModalImage2() {
-    modalMainImg.setAttribute("src", "images/image-product-2.jpg");
+  modalMainImg.setAttribute("src", "images/image-product-2.jpg");
 }
 function showModalImage3() {
-    modalMainImg.setAttribute("src", "images/image-product-3.jpg");
+  modalMainImg.setAttribute("src", "images/image-product-3.jpg");
 }
 function showModalImage4() {
-    modalMainImg.setAttribute("src", "images/image-product-4.jpg");
+  modalMainImg.setAttribute("src", "images/image-product-4.jpg");
 }
 function showImagesModal() {
-    imagesModal.style.display = 'flex';
+  imagesModal.style.display = "flex";
 }
 function closeImagesModal() {
-    imagesModal.style.display = 'none';
+  imagesModal.style.display = "none";
 }
 
 //changing main img in smartphone
@@ -116,8 +116,8 @@ function showPrevImage() {
   mobileMainImg.setAttribute("src", `images/image-product-${value}.jpg`);
 }
 
+//changing the active img
 const items = Array.from(document.getElementsByClassName("thumbnail-img"));
-console.log(items);
 items.forEach((item) => {
   item.addEventListener("click", onItemClick);
 });
@@ -132,3 +132,4 @@ function onItemClick(e) {
     item.classList.remove("active");
   });
 }
+
