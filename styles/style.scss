@@ -18,6 +18,11 @@ nav {
   .title {
     font-size: 20px;
     margin-right: 50px;
+    display: flex;
+    align-items: center;
+    .menu-icon {
+      display: none;
+    }
   }
   .items {
     ul {
@@ -80,6 +85,9 @@ nav {
       }
     }
   }
+}
+.lateral-menu {
+  display: none;
 }
 .cart-modal {
   display: none;
@@ -291,7 +299,7 @@ nav {
     opacity: 0.6;
   }
 }
-.images-modal {
+.lateral-menu {
   display: none;
   justify-content: center;
   align-items: center;
@@ -354,16 +362,68 @@ nav {
   }
 }
 @media (max-width: 376px) {
+  .images-modal{
+    display: none;
+  }
   nav {
     max-width: 100%;
     height: fit-content;
     padding: 10px 20px;
     border: none;
     .title {
-      font-size: 22px;
+      font-size: 25px;
+      .menu-icon {
+        display: flex;
+        width: 20px;
+        height: 15px;
+        margin: 6px 10px 0 0;
+      }
     }
     .items {
       display: none;
+    }
+    .profile {
+      .profile-picture {
+        margin-left: 15px;
+      }
+    }
+  }
+  .lateral-menu {
+    display: none;
+    position: fixed;
+    z-index: 20;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(22, 22, 22, 0.815);
+    .items-container{
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      width: 0;
+      height: 100%;
+      padding: 30px;
+      position: absolute;
+      img{
+        width: 20px;
+        margin: 10px 0 20px 0;
+      }
+      .modal-items{
+        list-style: none;
+        li{
+          font-size: 20px;
+          font-weight: 700;
+          margin: 20px 0;
+          transition: all .4s ease-in-out;
+          &:hover{
+            color: #ff7002;
+          }
+        }
+      }
+      transition: width 1s ease-in-out;
+    }
+    .active-menu{
+      left: 0;
+      width: 70%;
     }
   }
   .content-container {
@@ -400,11 +460,11 @@ nav {
           }
         }
       }
-      .prev{
+      .prev {
         top: 120px;
         left: 15px;
       }
-      .next{
+      .next {
         top: 120px;
         right: 15px;
       }
@@ -455,7 +515,7 @@ nav {
       }
     }
   }
-  .cart-modal{
+  .cart-modal {
     top: 75px;
     right: 10px;
     width: 355px;

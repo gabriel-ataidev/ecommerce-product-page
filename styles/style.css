@@ -29,6 +29,16 @@ nav {
 nav .title {
   font-size: 20px;
   margin-right: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .title .menu-icon {
+  display: none;
 }
 
 nav .items ul {
@@ -113,6 +123,10 @@ nav .profile .profile-picture img {
 nav .profile .profile-picture img:hover {
   border: 2px solid #ff7d1a;
   border-radius: 50px;
+}
+
+.lateral-menu {
+  display: none;
 }
 
 .cart-modal {
@@ -418,7 +432,7 @@ nav .profile .profile-picture img:hover {
   opacity: 0.6;
 }
 
-.images-modal {
+.lateral-menu {
   display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -433,7 +447,7 @@ nav .profile .profile-picture img:hover {
   background: rgba(22, 22, 22, 0.815);
 }
 
-.images-modal .content-container {
+.lateral-menu .content-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -445,7 +459,7 @@ nav .profile .profile-picture img:hover {
           transform: translateX(-40px);
 }
 
-.images-modal .content-container .close-btn {
+.lateral-menu .content-container .close-btn {
   cursor: pointer;
   margin-left: auto;
   margin-bottom: 15px;
@@ -453,13 +467,13 @@ nav .profile .profile-picture img:hover {
           transform: translateX(40px);
 }
 
-.images-modal .content-container .close-btn:hover path {
+.lateral-menu .content-container .close-btn:hover path {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   fill: #ff7d1a;
 }
 
-.images-modal .content-container .btn-container {
+.lateral-menu .content-container .btn-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -480,18 +494,18 @@ nav .profile .profile-picture img:hover {
   z-index: 12;
 }
 
-.images-modal .content-container .btn-container:hover svg path {
+.lateral-menu .content-container .btn-container:hover svg path {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   stroke: #ff7d1a;
 }
 
-.images-modal .content-container .prev {
+.lateral-menu .content-container .prev {
   -webkit-transform: translate(30px, 240px);
           transform: translate(30px, 240px);
 }
 
-.images-modal .content-container .images-container {
+.lateral-menu .content-container .images-container {
   -ms-grid-columns: [start] 75px [line1] 75px [line2] 75px [line3] 75px [end];
       grid-template-columns: [start] 75px [line1] 75px [line2] 75px [line3] 75px [end];
   -ms-grid-rows: [start] 440px [row1] 90px [end];
@@ -499,7 +513,7 @@ nav .profile .profile-picture img:hover {
   gap: 20px;
 }
 
-.images-modal .content-container .images-container .main-img {
+.lateral-menu .content-container .images-container .main-img {
   width: 440px;
   height: auto;
   -webkit-transform: translateX(-40px);
@@ -508,6 +522,9 @@ nav .profile .profile-picture img:hover {
 }
 
 @media (max-width: 376px) {
+  .images-modal {
+    display: none;
+  }
   nav {
     max-width: 100%;
     height: -webkit-fit-content;
@@ -517,10 +534,66 @@ nav .profile .profile-picture img:hover {
     border: none;
   }
   nav .title {
-    font-size: 22px;
+    font-size: 25px;
+  }
+  nav .title .menu-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 20px;
+    height: 15px;
+    margin: 6px 10px 0 0;
   }
   nav .items {
     display: none;
+  }
+  nav .profile .profile-picture {
+    margin-left: 15px;
+  }
+  .lateral-menu {
+    display: none;
+    position: fixed;
+    z-index: 20;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(22, 22, 22, 0.815);
+  }
+  .lateral-menu .items-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: #fff;
+    width: 0;
+    height: 100%;
+    padding: 30px;
+    position: absolute;
+    -webkit-transition: width 1s ease-in-out;
+    transition: width 1s ease-in-out;
+  }
+  .lateral-menu .items-container img {
+    width: 20px;
+    margin: 10px 0 20px 0;
+  }
+  .lateral-menu .items-container .modal-items {
+    list-style: none;
+  }
+  .lateral-menu .items-container .modal-items li {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 20px 0;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+  .lateral-menu .items-container .modal-items li:hover {
+    color: #ff7002;
+  }
+  .lateral-menu .active-menu {
+    left: 0;
+    width: 70%;
   }
   .content-container {
     margin: 0;

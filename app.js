@@ -133,3 +133,14 @@ function onItemClick(e) {
   });
 }
 
+//showing and hiding lateral menu
+const lateralMenu = document.querySelector('.lateral-menu');
+const itemsContainer = document.querySelector('.items-container');
+function showLateralMenu() {
+  lateralMenu.style.display = 'flex';
+  itemsContainer.classList.add('active-menu');
+}
+function hideLateralMenu() {
+  lateralMenu.style.display = 'none';
+  itemsContainer.classList.remove('active-menu');
+}
