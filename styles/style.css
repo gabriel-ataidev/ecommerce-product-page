@@ -605,7 +605,7 @@ nav .profile .profile-picture img:hover {
   cursor: initial;
 }
 
-@media (max-width: 376px) {
+@media (max-width: 420px) {
   .images-modal {
     display: none;
   }
