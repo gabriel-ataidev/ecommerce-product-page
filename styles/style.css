@@ -605,7 +605,23 @@ nav .profile .profile-picture img:hover {
   cursor: initial;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 1200px) {
+  .content-container {
+    max-width: 100%;
+    gap: 30px;
+  }
+  .content-container .images-container {
+    margin-left: 140px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .content-container .images-container {
+    margin-left: 40px;
+  }
+}
+
+@media (max-width: 860px) {
   .images-modal {
     display: none;
   }
@@ -692,7 +708,7 @@ nav .profile .profile-picture img:hover {
     display: flex;
     width: 100vw;
     position: relative;
-    max-height: 290px;
+    max-height: 390px;
     overflow: hidden;
   }
   .content-container .mobile-images .mobile-main-img img {
