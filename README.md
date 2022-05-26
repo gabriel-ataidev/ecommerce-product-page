@@ -1,6 +1,6 @@
-# E-commerce product page
+# Produto de e-commerce
 
-Projeto inspirado no desafio <a href="https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6" target="_blank">E-commerce product page</a> do Frontend Mentor.
+Neste projeto foi desenvolvido uma página de produto de e-commerce, onde é possivel dar zoom nas imagens, selecionar a quantidade de tênis e adicionar ao carrinho.
 Um projeto bastante desafiador em que pude aprender varias funcionalidades no Javascript. Utilizei HTML, CSS(SASS) e VanillaJS.
 <a href="https://ecommerce-pp.netlify.app/" target="_blank">Clique aqui</a> para conferir o resultado final.
 ##
